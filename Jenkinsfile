@@ -3,7 +3,9 @@ pipeline {
 	triggers {
   pollSCM '* * * * *'
 }
-
+       parameters {
+  booleanParam description: 'demo earbuds', name: 'boolean'
+}
 	parameters {
   choice choices: ['DEV', 'UAT', 'QA', 'PROD'], description: 'parameterized', name: 'Environment'
 }
