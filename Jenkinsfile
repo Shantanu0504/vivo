@@ -2,7 +2,7 @@ pipeline {
 	agent any 
 	
 	triggers {
-  pollSCM '* * * * *'
+    '* * * * *'
 }
 	stages {
 	    stage('Checkout') {
@@ -11,7 +11,7 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh 'sudo /home/shantanu/Downloads/Devops/apache-maven-3.9.5-bin/apache-maven-3.9.5/bin /mvn install'
+			  sh '/home/shantanu/Downloads/Devops/apache-maven-3.9.5-bin/apache-maven-3.9.5/bin /mvn install'
 	                 }}
 		stage('Deployment'){
 		   steps {
