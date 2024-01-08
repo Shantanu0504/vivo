@@ -4,12 +4,6 @@ pipeline {
 	triggers {
   pollSCM '* * * * *'
 }
-
-
-
-	parameters {
-  choice choices: ['DEV', 'UAT', 'QA', 'PROD'], description: 'parameterized', name: 'Environment'
-}
 	stages {
 	    stage('Checkout') {
 	        steps {
@@ -17,7 +11,7 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/shantanu/Downloads/Devops/apache-maven-3.9.5-bin/apache-maven-3.9.5/bin/mvn install'
+			  sh '/home/shantanu/Downloads/Devops/apache-maven-3.9.5-bin/apache-maven-3.9.5/bin /mvn install'
 	                 }}
 		stage('Deployment'){
 		   steps {
